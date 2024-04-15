@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="EstiloCF">
+    <link rel="stylesheet" href="EstiloCF.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="CuerpoArribaCCF">
+    <table> 
+        <thead>
+            <tr>
+                <td class="text-bold">    &lt;&lt;[ClienteCF].[Nombre]&gt;&gt;/&lt;&lt;[VehiculoCF].[VehiColor]&gt;&gt;
+                </td>
+                <td class="text-bold">&lt;&lt;[DiaCF]&gt;&gt;</td>
+                <td class="text-bold">&lt;&lt;[MesCF]&gt;&gt;</td>
+                <td class="text-bold">&lt;&lt;[AnoCF]&gt;&gt;</td>
+            </tr>
+        </thead>
+    </table>
+    </div>
+    <div>
+        &lt;&lt;[ClienteCF].[Dirección]&gt;&gt;
+    </div>
+    <div>
+        &lt;&lt;[ClienteCF].[DUI]&gt;&gt;
+    </div>
+    <div></div>
+    <div></div>
+    <table>
+        <thead>
+            <tr>
+                <td class="text-bold">&lt;&lt;Start: [Related SERVCFs]&gt;&gt;&lt;&lt;[ServicioCF_id].[CantidadCF]&gt;&gt;</td>
+                <td class="text-bold">&lt;&lt;IF:ISBLANK([ProductoRefServCF])&gt;&gt;&lt;&lt;[ServicioREF].[NombreServicio]&gt;&gt;&lt;&lt;Endif&gt;&gt;&lt;&lt;IF:ISBLANK([ServicioREF])&gt;&gt;&lt;&lt;[ProductoRefServCF].[PRODUCTO]&gt;&gt;&lt;&lt;Endif&gt;&gt;</td>
+                <td class="text-bold">0.00</td>
+                <td class="text-bold">0.00</td>
+                <td class="text-bold">&lt;&lt;[PrecioServCF]&gt;&gt;&lt;&lt;End&gt;&gt;</td>
+            </tr>
+        </thead>
+    </table>
+    <div>
+        &lt;&lt;[SumPreciosCF]&gt;&gt;
+    </div>
+    <div>
+        $0.00
+    </div>
+    <div>
+        &lt;&lt;[SumPreciosCF]&gt;&gt;
+    </div>
+    <div>
+        $0.00
+    </div>
+    <div>
+        $0.00
+    </div>
+    <div>
+        &lt;&lt;[SumPreciosCF]&gt;&gt;			
+    </div>
+</body>

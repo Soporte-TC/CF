@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="EstiloCF">
+    <link rel="stylesheet" href="EstiloCF.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <table class="datoscliente"> 
+        <thead>
+            <tr>
+            <td class="CL_datos">&lt;&lt;[ClienteCF].[Nombre]&gt;&gt;&lt;&lt;[VehiculoCF].[VehiColor]&gt;&gt;</td>
+            <td class="CL_dia">&lt;&lt;[DiaCF]&gt;&gt;</td>
+            <td class="CL_mes">&lt;&lt;[MesCF]&gt;&gt;</td>
+            <td class="CL_ano">&lt;&lt;[AnoCF]&gt;&gt;</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr> 
+                <td class="CF_direccion">&lt;&lt;[ClienteCF].[Dirección]&gt;&gt;</td>
+            </tr>
+            <tr>
+                <td class="CF_dui">&lt;&lt;[ClienteCF].[DUI]&gt;&gt;</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <div>
+    <table class="servicioscf">
+        <thead>
+            <tr class="columnascf">
+                <td class="blank1"></td>
+                <td class="blank2"></td>
+                <td class="blank3"></td>
+                <td class="blank4"></td>
+                <td class="blank5"></td>
+                <td class="blank6"></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="columnascf">
+                <td class="cantidadserv">&lt;&lt;Start: [Related SERVCFs]&gt;&gt;&lt;&lt;[ServicioCF_id].[CantidadCF]&gt;&gt;</td>
+                <td class="servpro">&lt;&lt;IF:ISBLANK([ProductoRefServCF])&gt;&gt;&lt;&lt;[ServicioREF].[NombreServicio]&gt;&gt;&lt;&lt;Endif&gt;&gt;&lt;&lt;IF:ISBLANK([ServicioREF])&gt;&gt;&lt;&lt;[ProductoRefServCF].[PRODUCTO]&gt;&gt;&lt;&lt;Endif&gt;&gt;</td>
+                <td class="precioserv">&lt;&lt;[PrecioServCF]&gt;&gt;</td>
+                <td class="cero1">0.00</td>
+                <td class="cero2">0.00</td>
+                <td class="precioserv2">&lt;&lt;[PrecioServCF]&gt;&gt;&lt;&lt;End&gt;&gt;</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+   <table class="Nal">
+        <tr>
+            <td class="son">&lt;&lt;[NaL_CF]&gt;&gt;</td>
+        </tr>
+   </table>
+   <table class="sumascf">
+        <tr>
+        <td class="sumprecioscf">&lt;&lt;[SumPreciosCF]&gt;&gt;</td>
+        </tr>
+        <tr>
+            <td class="cero3">$0.00</td>
+        </tr>
+        <tr>
+            <td class="sumprecioscf2">&lt;&lt;[SumPreciosCF]&gt;&gt;</td>
+            </tr>
+        <tr>
+            <td class="cero4">$0.00</td>
+        </tr>
+        <tr>
+            <td class="cero5">$0.00</td>
+        </tr>
+        <tr>
+            <td class="sumprecioscf2">&lt;&lt;[SumPreciosCF]&gt;&gt;</td>
+            </tr>
+        <tr>
+   </table>
+</body>
